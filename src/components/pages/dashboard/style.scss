@@ -1,0 +1,279 @@
+@import '../../../styles/global.scss';
+
+.dashboardWrapper {
+  @include xs {
+    margin-top: 48px;
+  }
+
+  @include sm {
+    margin-top: 48px;
+  }
+
+  @include md {
+    margin-top: 120px;
+  }
+
+  .pageHeader {
+    align-items: center;
+    margin-bottom: 48px;
+
+    @include xs {
+      display: grid;
+    }
+
+    @include sm {
+      display: grid;
+    }
+
+    @include md {
+      display: flex;
+    }
+
+    &__userName {
+      margin-left: 12px;
+      color: #FF2B67;
+      @include xs {
+        margin-left: 0;
+      }
+
+      @include sm {
+        margin-left: 0;
+      }
+
+      @include md {
+        margin-left: 12px;
+      }
+
+    }
+    img {
+      margin-left: 12px;
+    }
+  }
+
+  .dashboardCardWrapper {
+    &__smallCard {
+      .vertical-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .ant-card-body {
+
+        @include xs {
+          display: block;
+        }
+
+        @include sm {
+          display: block;
+        }
+
+        @include md {
+          display: block;
+        }
+
+        @include lg {
+          display: flex;
+        }
+      }
+    }
+  }
+  .default-text {
+    &.large {
+      font-size: 24px;
+      line-height: 80%;
+    }
+    &.medium {
+      font-family: Manrope;
+      @include sm {
+        font-size: 14px;
+      }
+
+      @include md {
+        font-size: 16px;
+      }
+      line-height: 16px;
+    }
+    &.red {
+      color: #FF2B67;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 80%;
+    }
+  }
+  .dashboardSection {
+
+    .show-all {
+      @include xs {
+        display: none;
+      }
+
+      @include sm {
+        display: block;
+      }
+
+      @include md {
+        display: block;
+      }
+    }
+    .page-footer {
+      margin-top: 32px;
+      @include xs {
+        display: block;
+      }
+
+      @include sm {
+        display: none;
+      }
+
+      @include md {
+        display: none;
+      }
+      button {
+        width: 100%;
+        color: #FF2B67;
+        background: #fff0f4;
+      }
+    }
+  }
+  .dashboardProjectWrapper {
+    .projectColCardWrapper {
+
+      .projectColWrapper {
+        margin: 8px 0;
+        .image-wrapper {
+          margin-bottom: 24px;
+          .img {
+            height: 240px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 16px;
+          }
+        }
+        .content-wrapper {
+          .title {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+          }
+
+          .sub-title {
+            @include xs {
+              font-size: 16px;
+            }
+            @include sm {
+              font-size: 16px;
+            }
+            @include md {
+              font-size: 18px;
+            }
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 18px;
+          }
+
+          .tag {
+            svg {
+              margin-right: 8px;
+            }
+            @include xs {
+              font-size: 16px;
+            }
+            @include sm {
+              font-size: 16px;
+            }
+            @include md {
+              font-size: 18px;
+            }
+            font-family: Codec Pro;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .dashboardActivityWrapper {
+    .activityColCardWrapper {
+      &__simpleCard {
+
+        @include xs {
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          box-sizing: border-box;
+          box-shadow: 0px 2.5px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        @include sm {
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          box-sizing: border-box;
+          box-shadow: 0px 2.5px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        @include md {
+          border: unset;
+          box-sizing: unset;
+          box-shadow: 0px 2.5px 44px rgb(0 0 0 / 7%);
+        }
+
+        margin-bottom: 32px;
+        .ant-card-body {
+          display: flex;
+        }
+        .simpleCardContent {
+          margin-left: 12px;
+          .heading {
+            @include xs {
+              font-size: 15px;
+            }
+            @include sm {
+              font-size: 15px;
+            }
+            @include md {
+              font-size: 18px;
+            }
+            font-family: Codec Pro;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 80%;
+            .userName {
+              margin-right: 4px;
+              font-weight: 700;
+            }
+            .money {
+              color: #FF2B67;
+              margin-left: 4px;
+              font-weight: 700;
+            }
+          }
+          .content {
+            @include xs {
+              font-size: 13px;
+            }
+            @include sm {
+              font-size: 13px;
+            }
+            @include md {
+              font-size: 15px;
+            }
+            margin-top: 12px;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            color: #141414;
+          }
+        }
+      }
+      &__avatar {
+        margin-bottom: 32px;
+        background-color: #ffe9ef;
+      }
+    }
+  }
+}

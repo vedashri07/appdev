@@ -1,0 +1,81 @@
+@import '../global.scss';
+
+.box-wrapper { 
+  display: flex;
+  padding: 80px 140px 80px 140px;
+  margin-bottom: 40px;
+  @include md {
+    padding: 0px 26px 0px 26px;
+  }
+  @include sm {
+    margin: 0px 26px 0px 26px;
+  }
+.contant-box-left{
+  display: flex;
+  @include sm{
+    flex-direction: column;
+  }
+  .content-message{
+    margin-left: 140px;
+    @include md{
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+    @include sm{
+      margin: 24px;
+    }
+  }
+}
+.contant-box-right{
+  display: flex;
+  flex-direction: row-reverse;
+  @include sm{
+    flex-direction: column;
+  }
+  .content-message{
+    margin-right: 140px;
+    @include md{
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+    @include sm{
+      margin: 24px;
+    }
+  }
+}
+.content-image{
+  @include md {
+    margin: 0px 26px 0px 26px;
+  }
+  @include sm{
+    padding: 0px;
+  }
+  .imageClassName{
+    @include md{
+      width: 336px;
+      height: 420px;
+      display: block;
+      padding: 0px;
+    }
+    @include sm{
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 0px;
+    }
+  }
+}
+.content-message{
+  align-self: center;
+  .eyebrow-label {
+    text-align: center;
+    @extend %eyebrow;
+    color: $rumi-secondary-teal;
+  }
+  .content-label {
+    @extend %base-font;
+    margin: 40px 0px 40px 0px;
+  }
+}
+}
+

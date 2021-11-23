@@ -1,0 +1,90 @@
+@import '../global.scss';
+.mobile-nav{
+    background-color: #fff;
+    top: 145px;
+    max-height: 110vh;
+    opacity: 1;
+    padding-bottom: 120px;
+    overflow-y: auto;
+    height: calc(100vh - 146px);
+    z-index: 100003;
+}
+.drawerPaper {
+    width: 100%;
+    .MuiDrawer-paper{
+        position: relative;
+        white-space: nowrap;
+        .main-nav-item{
+            padding-left: 12px;
+            .MuiListItem-button{
+                .MuiListItemText-root{
+                    span{
+                        @extend %header-three;
+                    }
+                }
+                
+            }
+        }
+        .sub-menu-list{
+            padding-left: 12px;
+            .MuiListItem-root:first-child span {
+                @extend %header-three;
+                white-space: normal !important;
+            }
+        }
+        .MuiListItem-root{
+            span{
+                @extend %base-large;
+            }
+        }
+        .nav-next-icon{
+            display: flow-root;
+            svg{
+                font-size: 35px;
+            }
+        }
+    }
+  }
+  .content {
+    flex-grow: 1;
+    height: '100vh';
+    overflow: 'auto';
+  }
+  .container {
+      padding: auto;
+  }
+.mobile-cta{
+    @include md {
+        display: none;
+    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .mobile-teal-btn{
+        @extend %base-medium;
+        padding: 12px 24px 12px 24px !important;
+        background-color: $rumi-secondary-teal !important;
+        border-radius: 40px !important;
+        color: $rumi-off-white !important;
+        width: 366px !important;
+    }
+    .mobile-secondary-btn{
+        @extend %base-medium;
+        padding: 12px 24px 12px 24px !important;
+        border-radius: 40px !important;
+        background-color: $rumi-off-white !important;
+        width: 366px !important;
+        margin-bottom: 16px !important;
+    }
+}
+.mobile-link-cta{
+    @extend %base-large;
+    display: flex;
+    flex-direction: column;
+    color: $rumi-black;
+    .link{
+        padding: 16px 24px;
+    }
+}
+  
+

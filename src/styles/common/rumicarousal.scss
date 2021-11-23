@@ -1,0 +1,160 @@
+@import '../global.scss';
+
+
+.rumi-caraousal-container {
+  min-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include md {
+    display: none;
+  }
+
+  @include sm {
+    display: none;
+  }
+
+  .rumi-caraousal-container-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rumi-caraousal-container-header-helper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .rumi-caraousal-container-header-text {
+    @extend %header-two;
+    color: $black;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .rumi-caraousal-container-header-primarybutton {
+    margin-left: 10px !important;
+    color: $black;
+    vertical-align: middle !important;
+  }
+
+  .rumi-caraousal-container-header-secondarybutton {
+    width: 50px;
+    height: 50px;
+    border-color: #666666 !important;
+    border: 1px !important;
+    border-radius: 25px !important;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rumi-caraousal-body-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .rumi-caraousal-body-card {
+    flex-direction: column;
+    margin-right: 40px;
+  }
+
+  .rumi-caraousal-body-card-text {
+    @extend %header-five;
+    color: $rumi-black;
+    margin-top: 16px;
+  }
+}
+
+.rumi-caraousal-mobile {
+  --gutter: 0px;
+
+  @include lg {
+    display: none;
+  }
+
+  .rumi-caraousal-container-header-helper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .rumi-caraousal-container-header-text {
+    @extend %header-three;
+    color: $black;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .rumi-caraousal-container-header-primarybutton {
+
+    color: $black;
+    vertical-align: middle !important;
+    width: 10px;
+  }
+
+  .app {
+    padding: var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+  }
+
+  .app>* {
+    grid-column: 2 / -2;
+  }
+
+  .app>.full {
+    grid-column: 1 / -1;
+  }
+
+  .hs {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: repeat(6, calc(85% - var(--gutter) * 2));
+    grid-template-rows: minmax(250px, 1fr);
+
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .app {
+    width: 375px;
+    height: 450px;
+  }
+
+  .hs>li,
+  .item {
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 242px;
+    height: 300px;
+  }
+
+  .rumi-caraousal-body-card {
+    flex-direction: column;
+    scroll-snap-align: center;
+    padding: calc(var(--gutter) / 2 * 1.5);
+    display: flex;
+  }
+
+  .rumi-caraousal-body-card-text {
+    @extend %header-four;
+    color: $rumi-black;
+    margin-top: 5px;
+  }
+}

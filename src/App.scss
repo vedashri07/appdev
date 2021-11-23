@@ -1,0 +1,13 @@
+@import 'styles/_breakpoint.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_fonts.scss'; 
+
+.container {
+  background-color: aquamarine;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 60px;
+  grid-column-gap: 40px;
+  grid-template-rows: 40px;
+}

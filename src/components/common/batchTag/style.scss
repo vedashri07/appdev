@@ -1,0 +1,42 @@
+@import "../../../styles/global.scss";
+.hashTagItem {
+  display: flex;
+  align-items: center;
+  background: #FFF0F4;
+  border-radius: 100px;
+  padding: 13px 16px;
+  @include xs {
+    padding: 8px 16px;
+  }
+
+  @include sm {
+    padding: 10px 16px;
+  }
+
+  @include md {
+    padding: 13px 16px;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  &.active {
+    background: #FF2B67;
+    .hashTagItem__text {
+      color: #ffffff;
+    }
+  }
+  //
+  //.ant-typography
+
+  &__text {
+    &.defaultText {
+      color: #FF2B67;
+    }
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

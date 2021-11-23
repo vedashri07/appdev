@@ -1,0 +1,55 @@
+@import './_fonts.scss';
+@import './_colors.scss';
+@import './_variables.scss';
+@import './_breakpoint.scss';
+@import './_mixins.scss';
+@import './typography.scss';
+
+body {
+    overflow-x: hidden !important;
+    @extend %base-font;  
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 0;
+    top:1px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    @extend %header-one;  
+}
+
+h2 {
+    @extend %header-two;  
+}
+
+h3 {
+    @extend %header-three;  
+}
+
+h4 {
+    @extend %header-four;  
+}
+
+h5 {
+    @extend %header-five;  
+}
+
+h6 {
+    @extend %header-six;  
+}
+
+
+.gradient-right{
+    background: linear-gradient(270deg, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 0.5) 80.73%);
+    opacity: 0.5;
+}
+
+.gradient-left{
+    background: linear-gradient(270deg, rgba(32, 32, 32, 0.5) 15.63%, rgba(32, 32, 32, 0) 100%);
+    opacity: 0.5;
+}

@@ -1,0 +1,36 @@
+@import '../global.scss';
+
+.card-main {
+  background-color: $white;
+  border-radius: 8px;
+  padding: 40px 24px 40px 24px;
+  width: 160px;
+  height: 184px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  border: none;
+  box-sizing: border-box;
+  &:hover{
+    background-color: $rumi-teal10;
+  }
+  &:focus{
+    border: 3px solid $rumi-teal75; 
+  }
+  &:disabled{
+    background-color: $rumi-off-white;
+    color: $rumi-lighter-grey;
+  }
+  &:active{
+    background-color: $rumi-teal10;
+  }
+}
+
+.card-text {
+  padding-top: 15px;
+  text-align: center;
+  @extend %base-medium;
+
+}

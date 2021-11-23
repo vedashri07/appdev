@@ -1,0 +1,42 @@
+@import '../global.scss';
+.BrandingContainer {
+  margin : 0;
+  .brandCard {
+    background-color: #FFEAF0 !important;
+    background: #FFEAF0;
+    width : 100%;
+    box-shadow: inset 59.85px -59.85px 59.85px rgba(194, 194, 194, 0.1), inset -59.85px 59.85px 59.85px rgba(255, 255, 255, 0.1);
+    border-radius: 72px  !important; 
+    border-radius: 72px  !important; 
+    height: 540px; 
+    padding: 120px 70px 120px 70px  !important;
+    .simile {
+      margin: 0 auto;
+      text-align: center;
+    }
+  h1, h2 {
+    color : #000000;
+    font-family: CodecPro-Bold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 96px;
+    text-align: center;
+    opacity: revert;
+  }
+  @media only screen and (max-width: 768px) {
+    .ant-col-12 {
+        max-width: 100% !important;
+      }
+      h1, h2 { 
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 25%;
+      }
+      padding: 100px 20px 100px 20px  !important;
+  }
+ }
+
+
+}
+

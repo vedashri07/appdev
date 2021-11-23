@@ -1,0 +1,201 @@
+@import '../global.scss';
+
+.inverse {
+  transform: scaleX(-1);
+}
+
+.image-primary {
+  @include lg {
+    width: 100%;
+  }
+  @include md {
+    width: 100%;
+  }
+  @include sm {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-primary-left {
+  margin-left: 140px;
+  position: relative;
+  width: 560px;
+  height: auto;
+  margin-top: 92px;
+  margin-bottom: 92px;
+  background-color: $rumi-secondary-teal;
+  border-radius: 12px;
+  @include md {
+    margin-left: 32px;
+    width: 446px;
+    height: auto;
+  }
+  @include sm {
+    width: 100%;
+    margin: 0px !important;
+    border-radius: unset;
+  }
+}
+
+.card-primary-right {
+  margin-right: 60px;
+  position: relative;
+  width: 35%;
+  height: 65%;
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  background-color: $rumi-secondary-teal;
+  padding: 10px;
+  border-radius: 12px;
+  @include md {
+    width: 100%;
+    margin: 0px !important;
+    border-radius: unset;
+   }
+}
+
+.card-primary-nobackground-left {
+  margin-left: 140px;
+  position: relative;
+  width: 560px;
+  height: auto;
+  padding: 10px;
+  border-radius: 12px;
+  @include md {
+    width: 100%;
+    margin: 0px !important;
+    border-radius: unset;
+  }
+}
+
+.card-primary-nobackground-right {
+  margin-left: 140px;
+  position: relative;
+  width: 35%;
+  height: 65%;
+  padding: 10px;
+  border-radius: 12px;
+  @include md {
+    width: 100%;
+    margin: 0px !important;
+    border-radius: unset;
+  }
+}
+
+.card-content-primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @include lg {
+    padding: 68px;
+  }
+  @include md {
+    padding: 32px;
+  }
+  @include sm {
+    margin: 0px 20px 0px 20px;
+    padding: 40px 0px 56px 0px;
+  }
+}
+
+.content-primary-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content-primary-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-content-text-help {
+  @extend %eyebrow;
+  color: $white;
+  padding-bottom: 10px;
+}
+
+.card-content-text-title {
+  @extend %header-one;
+  color: $white;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  @include md {
+    font-size: 14px;
+   }
+}
+
+.card-content-text-title-small {
+  @extend %header-two;
+  color: $white;
+  padding-top: 14px;
+  padding-bottom: 42px;
+}
+
+.card-content-text-description {
+  @extend %base-large;
+  color: $white;
+  padding-bottom: 40px;
+  @include md {
+    font-size: 14px;
+   }
+}
+
+.card-button {
+  color: $black !important;
+  background-color: $white !important;
+  border-radius: 25px !important;
+  padding: 12px 30px 12px 30px !important;
+  margin-left: 0px !important;
+  text-transform: none !important;
+}
+
+.card-button-teal {
+  color: $white !important;
+  background-color: $rumi-secondary-teal !important;
+  border-radius: 25px !important;
+  padding: 12px 30px 12px 30px !important;
+  margin-left: 0px !important;
+  text-transform: none !important;
+}
+
+.card-button-text {
+  @extend %base-font;
+}
+.content-image-banner{
+  @include md {
+    display: none;
+  }
+  @include sm{
+    padding: 0px;
+    width:100%;
+  }
+  @include lg {
+    display:none;
+  }
+  .imageClassName{
+    @include md{
+      display: block;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    @include sm{
+      display: block;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}

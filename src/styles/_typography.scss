@@ -1,0 +1,170 @@
+
+%header-one {
+    font-family:  Baloo-Bold;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 58px;
+    letter-spacing: -0.5px;
+    @include lg {
+        font-size: 54px;
+        line-height: 58px;
+    }
+    @include md {
+        font-size: 42px;
+        line-height: 52px;
+    }
+    @include sm {
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+}
+
+%header-two {
+    font-family: Manrope-SemiBold;
+    font-weight: 500;
+    font-size: 45px;
+        line-height:47px;
+    letter-spacing: -0.5px;
+    @include lg {
+        font-size: 45px;
+        line-height:47px;
+    }
+    @include md {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    @include sm {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+%header-three {
+    font-family:  Baloo-Bold;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    @include lg {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    @include md {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    @include sm {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+%header-four {
+    font-family: Moss-SemiBold;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.25px;
+    @include lg {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    @include md {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    @include sm {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+%header-five {
+    font-family: Moss-Bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    @include lg {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    @include md {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    @include sm {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+%header-six {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    @include lg {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include md {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    @include sm {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+%base-font{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    @include sm {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+%base-medium{
+    //font-family: Moss-SemiBold;
+    font-family: Codec Pro;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    @include sm {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+%base-large{
+    font-family: Moss-SemiBold;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    @include lg {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    @include md {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    @include sm {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+%eyebrow{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}

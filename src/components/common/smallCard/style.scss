@@ -1,0 +1,88 @@
+@import '../../../styles/global.scss';
+
+.smallCard {
+  &.ant-card {
+    background: #FFFFFF;
+    box-shadow: 0 2.5px 44px #00000012;
+    border-radius: 16px;
+
+
+    .ant-card-body {
+      padding: 16px;
+      display: flex;
+      .vertical-wrapper {
+
+        @include xs {
+          margin-top: 16px;
+        }
+
+        @include sm {
+          margin-top: 16px;
+        }
+
+        @include md {
+          margin-top: 16px;
+        }
+
+        @include lg {
+          margin-top: 0px;
+        }
+      }
+
+      .ant-space {
+        margin-left: 16px;
+        @include xs {
+          margin-left: 0;
+        }
+        @include lg {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+.iconCard {
+  &.ant-card {
+    background: #FFF0F4;
+    border-radius: 12px;
+    @include xs {
+      height: 56px;
+      width: 56px;
+      .ant-card-body {
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    @include sm {
+      height: 56px;
+      width: 56px;
+      .ant-card-body {
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    @include md {
+      height: 56px;
+      width: 56px;
+      .ant-card-body {
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    @include lg {
+      height: auto;
+      width: auto;
+    }
+
+  }
+}

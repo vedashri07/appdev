@@ -1,0 +1,365 @@
+@import '../global.scss';
+
+.containerFooterNavbar {
+    background-color: #FFFFFF;
+    width: 100%;
+
+    padding-bottom: 50px;
+
+    @include xs {
+        margin-top: 48px;
+    }
+    @include sm {
+        margin-top: 48px;
+    }
+    @include md {
+        margin-top: 60px;
+    }
+    @include lg {
+        margin-top: 120px;
+    }
+
+    //@media only screen and (max-width: 768px) {
+    //   display:none;
+    //
+    //}
+}
+
+.footerNavbar {
+    @extend %base-medium;
+
+    @include lg {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    @include md {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-right: 15px;
+        align-items: center;
+    }
+    @include sm {
+        padding-right: 0;
+    }
+    .footer-logo {
+        @include xs {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0;
+            width: 48px;
+        }
+        @include sm {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0;
+            width: 54px;
+        }
+        @include md {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0;
+            width: 64px;
+        }
+        @include lg {
+            display: unset;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0px;
+        }
+
+    }
+     &__Left {
+         flex: 1 1;
+     }
+     &__Right {
+         flex: 1 1;
+         @include xs {
+             text-align: center;
+         }
+         @include sm {
+             text-align: center;
+         }
+         @include md {
+             text-align: end;
+         }
+
+     }
+
+    .footerBarMainLoggedIn {
+        @include sm {
+            justify-content: center;
+        }
+        @include md {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.footerBarMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 4 1;
+    @include sm {
+        padding-left: 0;
+        text-align: center;
+        font-size: 16px;
+    }
+    @include md {
+        padding-left: 0;
+        font-size: 18px;
+    }
+    &__textWrapper {
+        @include xs {
+            font-size: 16px;
+            padding-left: 26px;
+        }
+        @include sm {
+            font-size: 16px;
+            padding-left: 26px;
+        }
+        @include md {
+            font-size: 18px;
+            padding-left: 56px;
+        }
+    }
+
+    &__centerTextWrapper {
+        @include xs {
+            padding-right: 23px;
+        }
+        @include sm {
+            padding-right: 23px;
+        }
+        @include md {
+            padding-right: 32px;
+        }
+        @include lg {
+            padding-left: 56px;
+        }
+    }
+
+    &__mainWrapper {
+        justify-content: center;
+        @include xs {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        @include sm {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        @include md {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+.topNavbarSide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mainNavSearchContainerSmall {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .topNavbarSide {
+        display: none;
+    }
+    .mainNavSearchContainerSmall{
+        position: relative;
+        display: block;
+        margin-left: 10%;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex: 1;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .mainNavSearchContainer{
+        display: none !important;
+    }
+}
+
+.topNavbarNavItem {
+    padding: 12px 32px 8px 32px;
+    @include sm {
+        width: 50%;
+    }
+}
+
+.topNavbarNavItemActive {
+    background-color: #fff;
+}
+
+.topNavbarNavItemText {
+    color: #000000;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.topNavbarNavItemTextActive {
+    color: #000;
+}
+
+.containerMainNavbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    padding: 15px 48px;
+    @include md{
+        padding: 15px 20px;
+    }
+    @include sm{
+        padding: 15px 5px;
+    }
+}
+
+.mainNavbarLogoContainer{
+    padding: 15px;
+}
+
+.mainNavbarLogo{
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #000 !important;
+}
+
+.mainNavbarHamburgerContainer {
+    display: none !important;
+}
+
+.mainNavbarServices {
+    padding: 15px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainNavbarServicesText{
+    font-size: 16px !important;
+    color: #000 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: none;
+    font-family: Montserrat;
+}
+
+@media (max-width: 1100px) {
+    .mainNavbarHamburgerContainer {
+        display: block !important;
+    }
+    .mainNavbarServices {
+        display: none !important;
+    }
+}
+
+.mainNavbarSide {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding: 15px;
+    @include sm {
+        padding: 0;
+    }
+}
+
+.mainNavbarSideText{
+    font-size: 16px !important;
+    color: #000 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mainNavbarSideButtonTeal{
+    padding: 12px 24px 12px 24px !important;
+    background-color: $rumi-secondary-teal !important;
+    border-radius: 40px !important;
+    @include sm{
+        display: none !important;
+    }
+}
+
+.mainNavbarSideButtonSecondary{
+    padding: 12px 24px 12px 24px !important;
+    border-radius: 40px !important;
+    background-color: $rumi-off-white !important;
+    @include sm{
+        display: none !important;
+    }
+
+}
+
+.mainNavbarSideButtonTextTeal {
+    font-size: 16px !important;
+    color: #fff !important;
+    text-transform: none;
+}
+
+.mainNavbarSideButtonText {
+    font-size: 16px !important;
+    color: #000 !important;
+    text-transform: none;
+}
+
+.mainNavbarIconButton{
+    color: #000;
+}
+
+.mainNavbarIconButtonContainer {
+    padding-left: 15px;
+}
+
+.mainNavSearchContainer {
+    margin-left: 10%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .MuiFormControl-fullWidth {
+        width: 853px;
+    }
+    @include md {
+        .MuiFormControl-fullWidth {
+            margin-left: 0;
+            width: 339px;
+        }
+    }
+}
+
+.mainNavSearchField {
+    border-bottom: none !important;
+    border-bottom-color: #fff !important;
+    padding: 10px !important;
+    width: 853px;
+}
+@media only screen and (max-width: 768px) {
+    .topNavbar__Middle, .topNavbar__Right {
+        display:none;
+    }
+   
+
+}

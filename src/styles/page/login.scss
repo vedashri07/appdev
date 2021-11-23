@@ -1,0 +1,128 @@
+@import '../global.scss';
+.loginContainer {
+  margin : 0;
+  .formInput {
+    border: 2px solid #f9f9f9;
+    box-sizing: border-box;
+    border-radius: 12px;
+    max-width:370px;
+    // opacity: 0.07;
+
+  }
+.topRow { 
+  height: 540px;
+  padding: 71px 0 71px 0;
+  @media only screen and (max-width: 768px) {  
+    padding: 20px 0 20px 0;
+    height: 440px;
+  }
+}
+.midRow { 
+    padding: 0;
+    .imagePad {
+      padding: 0 0 16px 0;
+    }
+}
+.bottomTop {
+  padding: 50px 0 50px 0;
+}
+.cardColor {
+  background-color: #FFFFFF;
+  min-width:335px;
+  background: rgba(250, 250, 250, 0.35);
+  box-shadow: inset 59.85px -59.85px 59.85px rgba(194, 194, 194, 0.1), inset -59.85px 59.85px 59.85px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(100px);
+  border-radius: 72px  !important;
+  height: 540px;
+  padding: 120px 70px 120px 70px  !important;
+  .googleImage {
+    height:100px;
+    width:100px;
+  }
+
+  h1, h2 {
+    font-family: CodecPro-Bold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 47px;
+    color: #141414;
+  }
+  p {
+    font-family: Manrope-Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #141414;
+  }
+ 
+  @media only screen and (max-width: 768px) { 
+    padding: 20px 15px 20px 15px  !important;
+    height: 440px;
+  }
+  
+}
+
+.communicationCard{
+  background-color: #FF2B67 !important;
+  position: absolute;
+  background: #FF2B67;
+  box-shadow: inset 59.85px -59.85px 59.85px rgba(194, 194, 194, 0.1), inset -59.85px 59.85px 59.85px rgba(255, 255, 255, 0.1);
+  border-radius: 72px  !important; 
+  height: 540px; 
+  padding: 120px 70px 120px 70px  !important;
+  color:#FFFFFF;
+  
+  h1, p {
+    color:#FFFFFF;
+    font-size: 14px;
+    font-weight:500;
+    font-family: CodecPro-Bold;
+    font-style: normal;
+    line-height: 24px;
+  }
+   h2 {
+    color : #fff;
+    font-family: CodecPro-Bold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    padding: 1px 60px 0 0;
+   
+  }
+
+  .imagePad {
+    padding: 0 0 16px 0;
+  }
+  .imagePadTop 
+  {padding: 16px 0 16px 0; }
+  @media only screen and (max-width: 768px) { 
+    padding: 20px 15px 20px 15px  !important;
+    min-width:335px;
+  }
+  
+}
+.bottomCard {
+  background-color: #FF2B67 !important;
+ // position: absolute;
+  background: #FF2B67;
+  min-width:375px;
+  box-shadow: inset 59.85px -59.85px 59.85px rgba(194, 194, 194, 0.1), inset -59.85px 59.85px 59.85px rgba(255, 255, 255, 0.1);
+  border-radius: 72px  !important; 
+  height: 540px; 
+  padding: 120px 70px 120px 70px  !important;
+  h1, h2 {
+    color : #fff;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ant-col-12 {
+      max-width: 100% !important;
+      position: relative;
+    }
+   
+}
+}
+

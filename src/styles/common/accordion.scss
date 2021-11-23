@@ -1,0 +1,36 @@
+@import '../global.scss';
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 50px;
+    top:1px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, #F5F5F4, #F5F5F4), #FFFFFF;
+    .accordion-title-text {
+        @extend %header-five;
+    }
+    .accordion-summary-text {
+        @extend %base-font;
+    }
+}
+
+.accordion-parent {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include lg {
+        width: 760px;
+    }
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: linear-gradient(0deg, #F5F5F4, #F5F5F4), #FFFFFF;
+}
+
+.accordion-summary {
+    flex: 1;
+    display: flex;
+}

@@ -1,0 +1,234 @@
+@import '../global.scss';
+
+// Primary Button
+  .primary-btn {
+    font-family: Montserrat;
+    background-color: $rumi-primary-teal;
+    border-radius: 40px;
+    padding: 16px 28px;
+    align-items: center;
+    color: $white;
+    border: none;
+      &:hover{
+          background-color: $rumi-secondary-teal;
+      }
+      &:focus{
+        border: 3px solid $rumi-teal50;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+      &:disabled{
+        background-color: $rumi-off-white;
+        color: $rumi-lighter-grey;
+      }
+    }
+
+//Primary Outlined Button
+  .primary-outline-btn {
+    font-family: Montserrat;
+    background-color: $white;
+    border-radius: 40px;
+    padding: 16px 28px;
+    align-items: center;
+    color: $rumi-primary-teal;
+    border: 3px solid $rumi-primary-teal;
+    box-sizing: border-box;
+    border-radius: 40px;
+      &:hover{
+          background-color: $rumi-primary-teal;
+          color: white;
+      }
+      &:focus{
+        background-color: $rumi-primary-teal;
+        color: white;
+        border: 3px solid $rumi-teal50;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+      &:disabled{
+        background-color: $rumi-off-white;
+        color: $rumi-lighter-grey;
+      }
+    }
+
+// Secondary Button
+  .secondary-btn {
+    font-family: Montserrat;
+    background-color: $rumi-off-white;
+    border-radius: 40px;
+    padding: 16px 28px;
+    align-items: center;
+    border: none;
+    color: $rumi-black;
+      &:hover{
+          background-color: $rumi-teal05;
+      }
+      &:focus{
+        border: 3px solid $rumi-teal50;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+      &:disabled{
+        background-color: $rumi-off-white;
+        color: $rumi-lighter-grey;
+      }
+    }
+
+// Sceondary Outlined Buttton
+  .secondary-outline-btn {
+    font-family: Montserrat;
+    background-color: $white;
+    border-radius: 40px;
+    padding: 16px 28px;
+    align-items: center;
+    border: 3px solid $rumi-off-white;
+    box-sizing: border-box;
+    border-radius: 40px;
+    color: $rumi-black;
+      &:hover{
+          background-color: $rumi-teal05;
+          border: none;
+      }
+      &:focus{
+        border: 3px solid $rumi-teal50;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+      &:disabled{
+        background-color: $rumi-off-white;
+        color: $rumi-lighter-grey;
+      }
+    }
+
+// Disbaled Button
+  .disabled {
+    background-color: $rumi-off-white;
+    border-radius: 40px;
+    padding: 16px 28px;
+    align-items: center;
+    color: $rumi-lighter-grey;
+    border: none;
+  }
+
+  .primary-btn-icon {
+    font-family: Montserrat;
+    background-color: $rumi-primary-teal;
+    text-align: left;
+    border-radius: 40px;
+    background-image: url("../../assets/icons-24x24/Size-24x24-Color-White-Right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    border: 3px solid $rumi-primary-teal;
+    padding: 18px 56px 18px 26px;
+    align-items: center;
+    color: $white;
+    font-weight: 600;
+    &:hover{
+          background-color: $rumi-secondary-teal;
+          border: 3px solid $rumi-secondary-teal;
+      }
+      &:focus{
+        border: 3px solid $rumi-teal50;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+      &:disabled{
+        background-color: $rumi-off-white;
+        border: 3px solid $rumi-off-white;
+        color: $rumi-lighter-grey;
+      }
+      @include sm {
+        width: 327px;
+        height: 44px;
+        padding: 12px 19px;
+      }
+    }
+    
+    .primary-outline-btn-icon {
+      font-family: Montserrat;
+      background-color: $white;
+      border-radius: 40px;
+      background-image: url("../../assets/icons-24x24/Size-24x24-Color-Strong\ Teal-Right-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 16px 28px;
+      align-items: center;
+      color: $rumi-primary-teal;
+      border: 3px solid $rumi-primary-teal;
+      box-sizing: border-box;
+      font-weight: 600;
+      border-radius: 40px;
+        &:hover{
+            background-color: $rumi-primary-teal;
+            background-image: url("../../assets/icons-24x24/Size-24x24-Color-White-Right-arrow.svg");
+            color: white;
+        }
+        &:focus{
+          background-image: url("../../assets/icons-24x24/Size-24x24-Color-White-Right-arrow.svg");
+          background-color: $rumi-primary-teal;
+          color: white;
+          border: 3px solid $rumi-teal50;
+          box-sizing: border-box;
+          border-radius: 40px;
+        }
+        &:disabled{
+          background-color: $rumi-off-white;
+          color: $rumi-lighter-grey;
+        }
+      }
+
+.ant-btn {
+  background-color: $button-round-color;
+  color: $white;
+}
+
+.rounded-button {
+  @include xs {
+    font-size: 18px;
+    height: 48px;
+  }
+  @include sm {
+    font-size: 20px;
+    height: 50px;
+  }
+  background: $button-round-color;
+  border-radius: 100px;
+  width: max-content;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  // font
+  color: $white;
+  padding: 16px 22px 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: CodecPro-Bold;
+  line-height: 20px;
+}
+.white-button {
+  background:$white; 
+  border-radius: 100px;
+  height: 50px;
+  width: max-content;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  // font
+  color: $button-round-color;
+  padding: 16px 22px 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+.loginBtn {  
+width:320px;
+height:50px;
+font-family: CodecPro-Bold;
+font-style: normal;
+font-weight: normal;
+@media only screen and (max-width: 768px) { 
+  width:150px;
+}
+}

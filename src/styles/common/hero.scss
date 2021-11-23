@@ -1,0 +1,223 @@
+@import '../global.scss';
+
+.inverse {
+  transform: scaleX(-1);
+}
+
+.hero-image-primary {
+  @include lg {
+    width: 100%;
+  }
+  @include md {
+    width: 100%;
+  }
+  @include sm {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-center {
+  flex-direction: unset !important;
+  justify-content: center !important;
+}
+
+.card-primary-nobackground-center {
+  position: relative !important;
+  padding: 170px;
+  border-radius: 12px;
+  display: flex;
+  align-self: center;
+  @include md {
+    padding: 124px;
+   }
+  @include sm {
+    padding: 54px;
+   }
+}
+
+.card-primary-nobackground-left {
+  margin-left: 140px;
+  position: relative;
+  width: 560px;
+  height: auto;
+  margin-top: 140px;
+  margin-bottom: 140px;
+  padding: 10px;
+  border-radius: 12px;
+  @include md{  
+    width: 428px;
+    height: auto;
+  }
+  @include sm {
+    margin-left: 0px;
+    position: relative;
+    width: 100%;
+    min-height: 64%;
+    margin-top: 0px !important;
+    margin-bottom: 1% !important;
+    padding: 0px;
+    border-radius: unset;
+    background-color: $rumi-teal50;
+   }
+}
+
+.card-primary-nobackground-right {
+  margin-left: 140px;
+  position: relative;
+  width: 560px;
+  height: auto;
+  margin-top: 18% !important;
+  margin-bottom: 10% !important;
+  padding: 10px;
+  border-radius: 12px;
+  @include md{  
+    width: 428px;
+    height: auto;
+  }
+  @include sm {
+    margin-left: 0px;
+    position: relative;
+    width: 100%;
+    min-height: 64%;
+    margin-top: 0px !important;
+    margin-bottom: 1% !important;
+    padding: 0px;
+    border-radius: unset;
+    background-color: $rumi-teal50;
+   }
+}
+.content-primary-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @include lg {
+    padding: 68px;
+  }
+  @include md {
+    padding: 32px;
+  }
+  @include sm {
+    margin: 0px 20px 0px 20px;
+    padding: 40px 0px 56px 0px;
+  }
+}
+.content-primary-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @include lg {
+    padding: 68px;
+  }
+  @include md {
+    padding: 32px;
+  }
+  @include sm {
+    margin: 0px 20px 0px 20px;
+    padding: 40px 0px 56px 0px;
+  }
+}
+
+.card-content-text-help {
+  @extend %eyebrow;
+  color: $white;
+  padding-bottom: 10px;
+}
+
+.card-content-text-title {
+  @extend %header-one;
+  color: $white;
+  padding-top: 14px;
+  padding-bottom: 42px;
+  @include sm {
+    color: $black;
+    font-size: 14px;
+   }
+}
+
+.hero-content-text-title-small {
+  @extend %header-three;
+  color: $white;
+  padding-top: 14px;
+  padding-bottom: 24px;
+}
+
+.card-content-text-description {
+  @extend %base-large;
+  color: $white;
+  padding-bottom: 40px;
+  @include md {
+    font-size: 14px;
+  
+   }
+}
+
+.text-center {
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  @include md { 
+    text-align: left;
+    align-items: unset;
+    align-self: unset;;
+  }
+}
+
+.card-button {
+  color: $black !important;
+  background-color: $white !important;
+  border-radius: 25px !important;
+  padding: 12px 30px 12px 30px !important;
+  margin-left: 0px !important;
+  text-transform: none !important;
+}
+
+.card-button-teal {
+  color: $white !important;
+  background-color: $rumi-secondary-teal !important;
+  border-radius: 25px !important;
+  padding: 12px 30px 12px 30px !important;
+  margin-left: 0px !important;
+  text-transform: none !important;
+  @include md {
+    color: $black;
+   }
+}
+
+.card-button-text {
+  @extend %base-font;
+}
+.content-image-hero{
+  @include md {
+    display:none;
+  }
+  @include sm{
+    padding: 0px;
+    width:100%;
+  }
+  @include lg {
+    display:none;
+  }
+  .imageClassName{
+    @include md{
+      display: block;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    @include sm{
+      display: block;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}

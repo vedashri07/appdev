@@ -1,0 +1,302 @@
+@import '../global.scss';
+
+.containerTopNavbar {
+    background-color: #FFF;
+    width: 100%;
+}
+
+.topNavbar {
+    @extend %base-medium;
+
+    @include sm {
+        padding-right: 0;
+    }
+    @include md {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-right: 15px;
+        align-items: center;
+    }
+    @include lg {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__Left {
+        .goodWork-logo {
+            @include xs {
+                width: 48px;
+            }
+            @include sm {
+                width: 64px;
+            }
+        }
+
+        flex: 1;
+    }
+    //&__Middle {
+    //    flex: 1;
+    //}
+    &__Right {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        .user-image {
+            cursor: pointer;
+        }
+    }
+
+    .user-image {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        left: 1255px;
+        top: 55px;
+        margin-left: 16px;
+    }
+}
+
+.topNavbarMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .ant-row {
+        width: 100%;
+        justify-content: center;
+    }
+    @include sm {
+        padding-left: 0;
+        text-align: center;
+    }
+    @include md {
+        font-size: 18px;
+        padding-left: 0;
+    }
+    &__textWrapper {
+        a {
+            color: #000;
+        }
+        @include sm {
+            padding-right: 23px;
+        }
+        @include md {
+            padding-right: 32px;
+        }
+        @include lg {
+            padding-left: 56px;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.topNavbarSide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mainNavSearchContainerSmall {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .topNavbarSide {
+        display: none;
+    }
+    .mainNavSearchContainerSmall{
+        position: relative;
+        display: block;
+        margin-left: 10%;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex: 1;
+        background-color: #f3f3f3;
+        border-radius: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .mainNavSearchContainer{
+        display: none !important;
+    }
+}
+
+.topNavbarNavItem {
+    padding: 12px 32px 8px 32px;
+    @include sm {
+        width: 50%;
+    }
+}
+
+.topNavbarNavItemActive {
+    background-color: #fff;
+}
+
+.topNavbarNavItemText {
+    color: #000000;
+}
+
+.topNavbarNavItemTextActive {
+    color: #000;
+}
+
+.containerMainNavbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    padding: 15px 48px;
+    @include md{
+        padding: 15px 20px;
+    }
+    @include sm{
+        padding: 15px 5px;
+    }
+}
+
+.mainNavbarLogoContainer{
+    padding: 15px;
+}
+
+.mainNavbarLogo{
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #000 !important;
+}
+
+.mainNavbarHamburgerContainer {
+    display: none !important;
+}
+
+.mainNavbarServices {
+    padding: 15px;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainNavbarServicesText{
+    font-size: 16px !important;
+    color: #000 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: none;
+    font-family: Montserrat;
+}
+
+@media (max-width: 1100px) {
+    .mainNavbarHamburgerContainer {
+        display: block !important;
+    }
+    .mainNavbarServices {
+        display: none !important;
+    }
+}
+
+.mainNavbarSide {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding: 15px;
+    @include sm {
+        padding: 0;
+    }
+}
+
+.mainNavbarSideText{
+    font-size: 16px !important;
+    color: #000 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mainNavbarSideButtonTeal{
+    padding: 12px 24px 12px 24px !important;
+    background-color: $rumi-secondary-teal !important;
+    border-radius: 40px !important;
+    @include sm{
+        display: none !important;
+    }
+}
+
+.mainNavbarSideButtonSecondary{
+    padding: 12px 24px 12px 24px !important;
+    border-radius: 40px !important;
+    background-color: $rumi-off-white !important;
+    @include sm{
+        display: none !important;
+    }
+
+}
+
+.mainNavbarSideButtonTextTeal {
+    font-size: 16px !important;
+    color: #fff !important;
+    text-transform: none;
+}
+
+.mainNavbarSideButtonText {
+    font-size: 16px !important;
+    color: #000 !important;
+    text-transform: none;
+}
+
+.mainNavbarIconButton{
+    color: #000;
+}
+
+.mainNavbarIconButtonContainer {
+    padding-left: 15px;
+}
+
+.mainNavSearchContainer {
+    margin-left: 10%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .MuiFormControl-fullWidth {
+        width: 853px;
+    }
+    @include md {
+        .MuiFormControl-fullWidth {
+            margin-left: 0;
+            width: 339px;
+        }
+    }
+}
+
+.mainNavSearchField {
+    border-bottom: none !important;
+    border-bottom-color: #fff !important;
+    padding: 10px !important;
+    width: 853px;
+}
+@media only screen and (max-width: 768px) {  
+    .topNavbar__Middle, .topNavbar__Right {
+        //.add-image{
+        //    @include sm {
+        //        padding-left: 23px;
+        //    }
+        //    @include md {
+        //        padding-left: 56px;
+        //    }
+        //}
+        display:none;
+    }
+    
+}

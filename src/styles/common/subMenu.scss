@@ -1,0 +1,213 @@
+@import '../global.scss';
+
+.subMenuContainer {
+    top: 155px;
+    flex-grow: 1;
+    background-color: #fff !important;
+    width: 100%;
+    z-index: 100;
+    padding-bottom: 80px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.subMenuContainer::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.subMenuHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 60px;
+}
+
+.subMenuHeaderText {
+    @extend %header-three;  
+}
+
+.subMenuHeaderButton {
+    color: '#000',
+}
+
+.subMenuMainContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.subMenuItemsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subMenuItemsHeader {
+    @extend %header-six;
+    margin-top: 50px;
+    margin-bottom: 24px;
+    color: $rumi-black;
+}
+
+.subMenuItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2%;
+    @extend %base-medium
+}
+
+.subMenuItemsText {
+    @extend %base-medium;
+    margin-bottom: 12px;
+    color: $rumi-dark-grey;
+}
+
+.card-button {
+    color: $black !important;
+    background-color: $white !important;
+    border-radius: 25px !important;
+    padding: 12px 30px 12px 30px !important;
+    text-transform: none !important;
+  }
+
+.subMenuImage {
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 250px;
+    min-width: 300px;
+    min-height: 250px;
+    margin-top: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.submenu-image-header {
+    @extend %header-two;
+    margin-top: 24px;
+}
+
+.submenu-image-eyebrow{
+    @extend %eyebrow;
+}
+
+.subMenuImageContent {
+    font-size: 14px !important;
+    color: #666666 !important;
+    text-transform: none;
+    font-family: Montserrat;
+    padding-top: 5%;
+}
+
+.subMenuImageButton {
+    font-size: 14px !important;
+    color: #000 !important;
+    text-transform: none;
+    font-family: Montserrat;
+    padding-top: 5%;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+}
+
+.subMenuImageHalf{
+    height: 100%;
+    width: 100%;
+    max-width: 756px;
+    max-height: 700px;
+    min-width: 756px;
+    min-height: 700px;
+    margin-top: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    &:after{
+        background: linear-gradient(180deg, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 0.5) 84.58%);
+    }
+}
+
+.subMenuImageFullHeight {
+    height: 100%;
+    width: 100%;
+    max-width: 380px;
+    max-height: 756px;
+    min-width: 380px;
+    min-height: 756px;
+    margin-top: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    &:after{
+        background: linear-gradient(180deg, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 0.5) 84.58%);
+    }
+}
+.image-container{
+    padding-bottom: 54px;
+}
+.submenu-image-full {
+    position: relative;
+    margin-top: -23rem;
+    @include md {
+      width: 100%;
+      margin: 0px !important;
+      border-radius: unset;
+    }
+    .submenu-image-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 40px 0 40px;
+      }
+      .submenu-image-eyebrow{
+        color: $rumi-off-white
+      }
+      .submenu-image-header{
+          color: $rumi-off-white;
+      }
+      .submenu-image-description{
+        @extend %base-medium;
+        color: $white;
+        margin: 24px 0 24px;
+       
+      }
+  }
+
+  .submenu-image-half {
+    position: relative;
+    margin-top: -30rem;
+    @include md {
+      width: 100%;
+      margin: 0px !important;
+      border-radius: unset;
+    }
+    .submenu-image-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 40px 0 40px;
+      }
+      .submenu-image-eyebrow{
+        color: $rumi-off-white
+      }
+      .submenu-image-header{
+          color: $rumi-off-white;
+      }
+      .submenu-image-description{
+        @extend %base-medium;
+        color: $white;
+        margin: 24px 0 24px;
+       
+      }
+  }
+  
+  .subMenuItemsTextButton{
+      color: $rumi-primary-teal;
+      text-decoration: none;
+  }
+ 
+

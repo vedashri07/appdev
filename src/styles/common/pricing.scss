@@ -1,0 +1,71 @@
+@import '../global.scss';
+
+.pricing-wrapper { 
+    margin: 0rem;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    top:0rem;
+    bottom:0rem;
+    width:100%;
+    @include md { 
+        max-width: auto; 
+        width:auto;
+    }
+    .pricing-container {
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 1.25rem;
+        padding:2.5rem 1rem;
+        //box-shadow: 0rem 0rem 0.875rem 0rem #2147961A;
+        background: #FFF;
+        max-width: 50.3125rem;
+        @include md {
+            padding:2.5rem 2.5rem 2.5rem 2.5rem;
+        }
+        @include sm {
+            padding:2.5rem 2.5rem 2.5rem 2.5rem;
+        }
+        h2 {    
+            text-align: center;
+        }
+    } 
+.table-main{
+    text-align: center;
+}
+.pricing-label {
+    @extend %base-font;
+    margin: 24px;
+}
+
+li{
+    @extend %base-font;
+}
+
+.pricing-table {
+    width: 100%;
+ 
+}
+table, th, td { 
+    border-bottom: 1px solid #D1D2D4; 
+    border-collapse: collapse; 
+} 
+  
+th, td { 
+    padding: 16px; 
+} 
+  
+th { 
+    text-align: left; 
+} 
+.tdborder {
+    border-left: 1px solid #D1D2D4;
+    text-align: center;
+    width: 30%;
+}
+.eyebrow-label {
+    text-align: center;
+    @extend %eyebrow;
+    color: $rumi-secondary-teal;
+}
+}
