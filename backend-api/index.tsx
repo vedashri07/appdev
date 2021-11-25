@@ -11,10 +11,11 @@ const PORT = 7000;
 app.use(cors());
 app.use(bodypparser.json())
 app.use(bodypparser.urlencoded({ extended: true }));
-var customer = require('./routes/customer.ts')
+var customer = require('./routes/customer.ts');
+var project = require('./routes/projectroute.ts')
 
 app.use(customer);
-
+app.use(project);
 
 
 const SERVER_URI = 'mongodb://27017/demo?retryWrites=true&w=majority'
