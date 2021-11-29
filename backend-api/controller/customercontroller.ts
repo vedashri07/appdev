@@ -90,16 +90,15 @@ exports.postLogin = (req, res, next) => {
 exports.customerUpdate = (req, res) => {
 
 
-    CustomerModel.findOne({ _id: req.body.id }, (err, customer) => {
-
-        customer.name = req.body.name;
-        customer.email_id = req.body.email_id;
-        customer.mobile_no = req.body.mobile_no;
-        customer.save.then(result => {
-            console.log("Update successfully");
+    CustomerModel.updateOne({ _id: req.body.id }, req.body)
+        .then(result => {
+            res.send("data updated successfully");
+        })
+        .catch(function (error) {
+            console.log(error);
+            res.send("not able to update");
         });
 
-    })
 
 }
 
@@ -124,13 +123,20 @@ exports.changePassword = (req, res) => {
 
 }
 
-exports.deleteUser = (req, res) => {
+//delete user
+
+exports.deleteUser = (req, res, next) => {
     CustomerModel.findOneAndRemove({
-        name: req.body.name, email: req.body.email_id
+        _id: req.body.id
 
     }).then(result => {
-        console.log("User deleted !");
+        res.send("User deleted !");
 
+    }).catch(function (error) {
+        res.send("User doesnt not exist")
     })
 
 }
+
+
+

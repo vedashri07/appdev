@@ -24,6 +24,7 @@
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.13",
+    "mongoose-paginate-v2": "^1.4.2",
     "nodemailer": "^6.7.1",
     "nodemon": "^2.0.15",
     "react-router-dom": "^6.0.2",

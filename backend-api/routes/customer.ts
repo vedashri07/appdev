@@ -10,11 +10,11 @@ const validator = require("../validation/validator.ts");
 
 
 
-router.post("/create/user", urlencodedParser,validator.createUser, CustomerController.createCustomer);
+router.post("/create/user", urlencodedParser, validator.createUser, CustomerController.createCustomer);
 router.post("/login/postlogin", urlencodedParser, CustomerController.postLogin);
-router.post("/update/userupdate",urlencodedParser,CustomerController.customerUpdate);
-router.post("/password/cahngepassword",urlencodedParser,CustomerController.changePassword);
-
+router.put("/update/userupdate", urlencodedParser, CustomerController.customerUpdate);
+router.post("/password/changepassword", urlencodedParser, CustomerController.changePassword);
+router.delete("/delete/deleteuser", urlencodedParser, CustomerController.deleteUser);
 
 
 module.exports = router;

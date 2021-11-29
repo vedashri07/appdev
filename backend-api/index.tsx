@@ -23,7 +23,7 @@ const URI = 'mongodb://127.0.0.1:27017/demo';
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(result => {
     console.log("database connection successfully");
 }).catch(err => {
-    console.log("error at momgodb" + err);
+    console.log("error at mongodb" + err);
 });
 
 
