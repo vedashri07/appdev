@@ -1,9 +1,27 @@
 
 var mongooseschema = require('mongoose');
 
-const Schema = mongooseschema.Schema;
-const CustomerSchema = new Schema({
-    name: {
+const schema = mongooseschema.Schema;
+const DonateSchema = new schema({
+
+    paymentType: {
+        type: String,
+        require: true
+    },
+    amount: {
+        type: Number,
+        require: true
+    },
+    firstName: {
+        type: String,
+        require: true
+    },
+    
+    lastName: {
+        type: String,
+        require: true
+    },
+    phoneNumber: {
         type: String,
         require: true
     },
@@ -11,31 +29,11 @@ const CustomerSchema = new Schema({
         type: String,
         require: true
     },
-    mobile_no: {
+    personalMessage: {
         type: String,
-        require: true
+        required: false
     },
-    password: {
-        type: String,
-        require: true
-    },
-
-    createdBy: {
-        type: String,
-        require: false
-    },
-    createdOn: {
-        type: Date,
-        require: false
-    },
-    updatedBy: {
-        type: String,
-        require: false,
-    },
-    updatedOn: {
-        type: Date,
-        require: false
-    },
+   
     isDeleted: {
         type: Boolean,
         require: false,
@@ -48,14 +46,8 @@ const CustomerSchema = new Schema({
     deletedOn: {
         type: Date,
         require: false
-    },
-    role: {
-        type: String,
-        required: true
-    },
-
+    }
 
 });
 
-
-module.exports = mongooseschema.model('Customer', CustomerSchema)
+module.exports = mongooseschema.model('Donate', DonateSchema)

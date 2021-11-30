@@ -4,19 +4,21 @@ const bodypparser = require('body-parser');
 
 
 var cors = require('cors');
-var customer = require('./routes/customer.ts')
+var customer = require('./routes/customer.ts');
+var project = require('./routes/projectroute.ts');
+var donate = require('./routes/donateroute.ts');
+var admin = require('./routes/adminroute.ts');
 
 const app = expressdemo();
 const PORT = 7000;
 app.use(cors());
 app.use(bodypparser.json())
 app.use(bodypparser.urlencoded({ extended: true }));
-var customer = require('./routes/customer.ts');
-var project = require('./routes/projectroute.ts')
 
 app.use(customer);
 app.use(project);
-
+app.use(donate);
+app.use(admin);
 
 const SERVER_URI = 'mongodb://27017/demo?retryWrites=true&w=majority'
 const URI = 'mongodb://127.0.0.1:27017/demo';
