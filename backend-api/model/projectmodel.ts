@@ -2,8 +2,13 @@
 var mongooseschema = require('mongoose');
 const mongoosePaginate = require("mongoose-paginate-v2");
 
+
 const schema = mongooseschema.Schema;
 const ProjectSchema = new schema({
+    userid: {
+        type: String,
+        require: true
+    },
     title: {
         type: String,
         // require: true
@@ -54,7 +59,7 @@ const ProjectSchema = new schema({
         // require: true,
     },
     riskAndChallenges: {
-        type: Date,
+        type: [],
         // require: true,
     },
     projectUrl: {

@@ -1,16 +1,27 @@
 const ProjectModel = require('../model/projectmodel.ts');
+const jwttoken = require('jsonwebtoken');
 
 const { body, validationResult } = require('express-validator');
 
 exports.createProject = (req, res, next) => {
 
     var upload;
+    var token = (req.body && req.body.token) || req.headers['token'];
+    if (token) {
+
+        var decoded = jwttoken.decode(token, process.env.TOKEN_SECRET);
+        var userid = decoded.userid;
+    }
     if (req.body.step === '') {
 
-        for (var i = 0; i <= Object.values(req.body).length; i++) {
-            if (Object.values(req.body)[i] === '') {
+        for (var i = 1; i <= Object.values(req.body).length; i++) {
+            if (Object.keys(req.body)[i] !== 'step' && Object.values(req.body)[i] === '') {
+
                 upload = false;
                 break;
+            }
+            else {
+                upload = true;
             }
         }
         if (upload) {
@@ -35,9 +46,9 @@ exports.createProject = (req, res, next) => {
             Object.keys(details).map(function (key, index) {
                 Projects[key] = req.body[key]
             });
-
+            Projects["userid"] = userid;
             Projects.save().then(result => {
-                console.log(result);
+                res.send(result);
             })
 
         }

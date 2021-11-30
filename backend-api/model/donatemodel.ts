@@ -3,7 +3,10 @@ var mongooseschema = require('mongoose');
 
 const schema = mongooseschema.Schema;
 const DonateSchema = new schema({
-
+    userid:{
+        type:String,
+        require:true
+    },
     paymentType: {
         type: String,
         require: true

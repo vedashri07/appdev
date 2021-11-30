@@ -17,7 +17,7 @@ const CustomerSchema = new Schema({
     },
     password: {
         type: String,
-        require: true
+        require: true,
     },
 
     createdBy: {

@@ -11,7 +11,7 @@ const validator = require("../validation/validator.ts");
 
 
 router.post("/create/user", urlencodedParser, validator.createUser, CustomerController.createCustomer);
-router.post("/login/postlogin", urlencodedParser, validator.resultsValidator, validator.login, CustomerController.postLogin);
+router.post("/login/postlogin", urlencodedParser, validator.login, CustomerController.postLogin);
 router.put("/update/userupdate", urlencodedParser, validator.resultsValidator, validator.updateUser, CustomerController.customerUpdate);
 router.post("/password/changepassword", urlencodedParser, CustomerController.changePassword);
 router.delete("/delete/deleteuser", urlencodedParser, CustomerController.deleteUser);
