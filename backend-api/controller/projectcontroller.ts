@@ -1,4 +1,5 @@
 const ProjectModel = require('../model/projectmodel.ts');
+const ProjectTypeModel = require('../model/projecttypemodel.ts');
 const jwttoken = require('jsonwebtoken');
 
 const { body, validationResult } = require('express-validator');
@@ -221,3 +222,72 @@ exports.filterProject = (req, res, next) => {
 }
 
 
+exports.projectTypes = (req, res, next) => {
+
+    ProjectTypeModel.find({}).then((result) => {
+
+        res.send(result);
+        console.log(result);
+
+    })
+        .catch(err => {
+            res.send(err);
+        })
+
+}
+
+exports.editProjectType = (req, res, next) => {
+    var id = req.body._id;
+    var toupdate = req.body.toupdate;
+    var updatefield = req.body.updatefield;
+    var updateValue = req.body.updateValue;
+    var condition1 = `${updatefield}._id`
+    var condition = `${updatefield}.$.name`;
+    console.log(
+        ProjectTypeModel.update(
+
+            { [condition1]: id },
+            { $set: { [condition]: updateValue } })
+    );
+    ProjectTypeModel.updateOne(
+
+        { [condition1]: id },
+        { $set: { [condition]: updateValue } })
+
+
+        .then((result) => {
+
+            res.send(result);
+            console.log(result);
+
+        })
+        .catch(err => {
+            res.send(err);
+        })
+
+
+
+}
+
+exports.insertProjectType = (req, res, next) => {
+
+
+    const Types = new ProjectTypeModel({
+
+        projectType: [{ name: req.body.projectType }],
+        category: [{ name: req.body.category }],
+        subcategory: [{ name: req.body.subcategory }]
+
+    })
+
+
+    Types.save().then(result => {
+        res.send(result);
+        console.log(result);
+    }).catch(err => {
+        console.log(err.message);
+    })
+
+
+
+}

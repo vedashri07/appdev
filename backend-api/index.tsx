@@ -24,6 +24,7 @@ app.use(
         }
     )
 );
+
 app.use(cors());
 app.use(bodypparser.json())
 app.use(bodypparser.urlencoded({ extended: true }));
